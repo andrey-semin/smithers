@@ -22,4 +22,9 @@ export default class Smithers {
         const requestUrl = createPath(paths.lastBuild, { name });
         return this.caller.get(requestUrl, config);
     }
+
+    lastFailedBuild(name, config) {
+        const requestUrl = createPath(paths.lastFailedBuild, { name });
+        return this.caller.get(requestUrl, config);
+    }
 }
